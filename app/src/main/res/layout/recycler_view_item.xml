@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_card"
+    style="@style/recycler_Item"
+    android:layout_marginEnd="@dimen/_10sdp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/place_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_search_recyclerItem_grid_img"
+            android:scaleType="fitXY"
+            tools:src="@drawable/bellman_bottom_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/padding_all_all_small"
+            android:paddingStart="@dimen/padding_all_all_small"
+            android:paddingTop="@dimen/padding_all_all_small">
+
+            <TextView
+                android:id="@+id/name_tv"
+                style="@style/search_recycler_listItem_name"
+                tools:text="Islam Khaled"
+                android:layout_marginBottom="@dimen/_10sdp"
+                />
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll"
+        app:layout_constraintTop_toBottomOf="@+id/main_header"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        >
+        <LinearLayout
+            android:layout_marginTop="@dimen/height_home_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+           <RelativeLayout
+               android:layout_marginTop="@dimen/_10sdp"
+               android:layout_marginBottom="@dimen/_10sdp"
+               android:id="@+id/hotspots_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+               <ImageView
+                   android:id="@+id/hotspot_iv"
+                   android:layout_width="@dimen/_20sdp"
+                   android:layout_gravity="end"
+                   android:layout_centerVertical="true"
+                   android:layout_height="@dimen/_20sdp"
+                   android:src="@drawable/hotspot_icon"
+                   />
+               <TextView
+                   android:id="@+id/hotspots_tv"
+                   style="@style/text_filter_small"
+                   android:layout_marginStart="@dimen/_8sdp"
+                   android:text="Hotspots"
+                   android:textColor="@color/black"
+                   android:layout_toEndOf="@+id/hotspot_iv"
+                   android:textSize="@dimen/fontSize_all_all_large"
+                   />
+
+               <TextView
+                   android:id="@+id/viewAll_hotspot_tv"
+                   style="@style/text_filter_small"
+                   android:layout_marginStart="@dimen/_8sdp"
+                   android:layout_toStartOf="@+id/viewAll_hotspot_iv"
+                   android:layout_marginEnd="@dimen/_10sdp"
+                   android:text="View all"
+                   android:textColor="@color/dark"
+                   android:textSize="@dimen/fontSize_all_all_large"
+
+                   />
+               <ImageView
+                   android:id="@+id/viewAll_hotspot_iv"
+                   android:layout_width="@dimen/_20sdp"
+                   android:layout_gravity="end"
+                   android:layout_alignParentEnd="true"
+                   android:layout_marginEnd="@dimen/_10sdp"
+                   android:layout_height="@dimen/_20sdp"
+                   android:src="@drawable/view_all_icon"
+                   />
+           </RelativeLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/hotspots_rv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/events_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/events_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:layout_centerVertical="true"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/events_icon"
+                    />
+                <TextView
+                    android:id="@+id/events_tv"
+                    style="@style/text_filter_small"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text="Events"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/events_iv"
+                    android:textSize="@dimen/fontSize_all_all_large"
+                    />
+
+                <TextView
+                    android:id="@+id/viewAll_event_tv"
+                    style="@style/text_filter_small"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_toStartOf="@+id/viewAll_event_iv"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="View all"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/fontSize_all_all_large"
+
+                    />
+                <ImageView
+                    android:id="@+id/viewAll_event_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/view_all_icon"
+                    />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/events_rv"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/attractions_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:id="@+id/attractions_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/attarctions_icon"
+                    />
+                <TextView
+                    android:id="@+id/attractions_tv"
+                    style="@style/text_filter_small"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:text="Attractions"
+                    android:textColor="@color/black"
+                    android:layout_toEndOf="@+id/attractions_iv"
+                    android:textSize="@dimen/fontSize_all_all_large"
+                    />
+
+                <TextView
+                    android:id="@+id/viewAll_attraction_tv"
+                    style="@style/text_filter_small"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_toStartOf="@+id/viewAll_attractions_iv"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="View all"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/fontSize_all_all_large"
+
+                    />
+                <ImageView
+                    android:id="@+id/viewAll_attractions_iv"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/view_all_icon"
+                    />
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginBottom="@dimen/_100sdp"
+                android:id="@+id/attractions_rv"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_home_header"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_home_header"
+            android:scaleType="fitXY"
+            android:src="@drawable/big_header"
+            />
+        <include
+            android:id="@+id/toolbar"
+
+            layout="@layout/toolbar_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/u_are_in_tv"
+            style="@style/text_filter_small"
+            android:text="you are in"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="you are in" />
+
+        <ImageView
+            android:id="@+id/map_iv"
+            android:layout_width="@dimen/_17sdp"
+            android:layout_height="@dimen/_17sdp"
+            android:src="@drawable/location_white"
+            android:layout_below="@+id/u_are_in_tv"
+            android:layout_marginStart="@dimen/_10sdp"
+            />
+
+        <TextView
+            android:id="@+id/location_tv"
+            style="@style/text_filter_small"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:text="Misr Al Gadida"
+            android:textSize="@dimen/fontSize_all_all_large"
+            android:layout_below="@+id/u_are_in_tv"
+            />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="@dimen/_215sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:background="@drawable/rectangular_rounded_corners"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:layout_below="@+id/location_tv"
+            >
+            <ImageView
+                android:id="@+id/search_icon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_search_icon" />
+
+
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search" />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@android:color/darker_gray" />
+            <ImageView
+                android:id="@+id/fiter_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/filter_inside_search"
+
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/bottom_bar_layout"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    >
+    <ImageView
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/_minus10sdp"
+        android:layout_marginStart="@dimen/_minus10sdp"
+        android:layout_marginBottom="@dimen/_minus10sdp"
+        android:layout_height="@dimen/height_bottom_bar"
+        android:adjustViewBounds="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_bar_curvy"
+        />
+    <ImageView
+        android:id="@+id/home_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/home_grey_bottom_icon"
+        app:layout_constraintTop_toTopOf="@+id/bottom_bar"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_14sdp"
+
+        />
+    <ImageView
+        android:id="@+id/search_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/search_grey_bottom_icon"
+        app:layout_constraintTop_toTopOf="@+id/bottom_bar"
+        android:layout_toEndOf="@+id/home_iv"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/_40sdp"
+
+        />
+    <ImageView
+        android:id="@+id/notification_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/notification_grey_bottom_icon"
+        app:layout_constraintTop_toTopOf="@+id/bottom_bar"
+        android:layout_toStartOf="@+id/profile_iv"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/_40sdp"
+
+        />
+    <ImageView
+        android:id="@+id/profile_iv"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/profile_grey_bottom_icon"
+        app:layout_constraintTop_toTopOf="@+id/bottom_bar"
+        android:layout_marginEnd="@dimen/_14sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+
+        />
+</RelativeLayout>
+    <ImageView
+        android:id="@+id/bellman_iv"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/bellman_bottom_icon"
+        android:layout_marginBottom="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>
